@@ -33,7 +33,7 @@ namespace Dedicnost
             else
             {
                 Console.WriteLine("Nemám dostatek many, použiji klacek!");
-                base.Utoc();
+                Console.WriteLine("Kouzelník útočí klackem!");;
             }
         }
 

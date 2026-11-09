@@ -10,24 +10,21 @@ using Dedicnost;
 
 public class Boss : Postava
 {
-
-
+    /// <summary>
+    /// Maximální počet životů bosse.
+    /// </summary>
+    public int Zivoty { get; set; }
 
     /// <summary>
     /// Aktuální počet životů bosse.
     /// </summary>
-    //
-    public int Zivoty {get;set;}
-
-    public int AktualniZivoty {get; protected set;}
+    public int AktualniZivoty { get; protected set; }
 
     /// <summary>
     /// Aktuální fáze souboje.
     /// Výchozí hodnota je 1.
     /// </summary>
-    //
-    public int Faze {get; private set;}
-
+    public int Faze { get; private set; }
 
     /// <summary>
     /// Vytvoří nového bosse se zadaným jménem
@@ -71,7 +68,7 @@ public class Boss : Postava
             break;
 
             default:
-                base.Utoc();
+                Console.WriteLine("Boss útočí!");
             break;
         }
     }

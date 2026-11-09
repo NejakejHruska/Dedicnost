@@ -5,6 +5,7 @@
         public static void Main(string[] args)
         {
             Postava [] legie = new Postava[1000];
+            ///Postava postava = new Postava("Test", 1);
 
             legie[0] = new Bojovnik(1, "Olaf", "Sekera");
             legie[1] = new Bojovnik(2, "Ragnar", "Meč");
@@ -14,6 +15,13 @@
             Bojovnik barbar = new Bojovnik(1, "Olaf", "Sekera");
             Kouzelnik kouzelnik = new Kouzelnik(2, "Merlin", 9, 100);
             FinalBoss finalBoss = new FinalBoss("Darth Vader", 25, 10000, 120);
+
+            List<Postava> postavy = new List<Postava>();
+            postavy.Add(new Bojovnik(5, "Rytíř", "Palcát"));
+            postavy.Add(new Kouzelnik(6, "Gandalf", 50, 100));
+            postavy.Add(new Boss("Sauron", 7, 5000));
+            postavy.Add(new FinalBoss("Hans", 8, 10000, 120));
+            foreach (Postava p in postavy) p.Utoc();
 
             finalBoss.VypisInformace();
             finalBoss.PrepniBojovyRezim();
